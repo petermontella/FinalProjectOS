@@ -1,8 +1,8 @@
-
 /**
  *
- * @author Bob Olkowitz
+ * @author TheBackRow
  */
+
 import java.io.*;
 
 public class FileManagerConstr {
@@ -106,9 +106,20 @@ public class FileManagerConstr {
         }
     } //end of move1
 
-    public void update() {
-
-    }
+    public void update(String path) {
+        try{
+            File y = new File(path);
+            namez = y;
+            y.delete();
+            this.create(namez.getPath());
+            System.out.println("File saved.");
+            
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        
+    } //end of update method
 
     public void copy() {
         try {
