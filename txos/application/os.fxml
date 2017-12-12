@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller3">
+   <children>
+      <ImageView fitHeight="606.0" fitWidth="700.0" pickOnBounds="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <image>
+            <Image url="@bg2.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="fileEx" layoutX="65.0" layoutY="48.0" mnemonicParsing="false" onAction="#fileEx" prefHeight="45.0" prefWidth="106.0" text="File Explorer" />
+      <Button fx:id="img2ascii" layoutX="65.0" layoutY="122.0" mnemonicParsing="false" onAction="#img" prefHeight="45.0" prefWidth="106.0" text="Image to ASCII" />
+      <Button fx:id="cmd" layoutX="65.0" layoutY="196.0" mnemonicParsing="false" onAction="#commands" prefHeight="45.0" prefWidth="106.0" text="CMD" />
+      <Button fx:id="logOff" layoutX="65.0" layoutY="269.0" mnemonicParsing="false" onAction="#logOff" prefHeight="45.0" prefWidth="106.0" text="Log Off" />
+      <Button fx:id="power" layoutX="65.0" layoutY="341.0" mnemonicParsing="false" onAction="#powerOff" prefHeight="45.0" prefWidth="106.0" text="Power Off" />
+      <TabPane fx:id="tab" layoutX="325.0" opacity="0.0" prefHeight="342.0" prefWidth="374.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Directories">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TreeView fx:id="fileView" onKeyPressed="#vanish" prefHeight="316.0" prefWidth="374.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller">
+   <children>
+      <ImageView fx:id="img" fitHeight="600.0" fitWidth="700.0" onDragDetected="#ascii" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@t.jpg" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="pass" layoutX="240.0" layoutY="279.0" prefHeight="32.0" prefWidth="219.0" promptText="Password" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.8" />
+      <TextField fx:id="user" layoutX="240.0" layoutY="234.0" prefHeight="32.0" prefWidth="219.0" promptText="User Name" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="240.8" />
+      <Button fx:id="sign" layoutX="240.0" layoutY="323.0" mnemonicParsing="false" onAction="#openSceneC" prefHeight="42.0" prefWidth="104.0" text="Sign in" />
+      <Button fx:id="create" layoutX="355.0" layoutY="323.0" mnemonicParsing="false" onAction="#openSceneB" prefHeight="42.0" prefWidth="104.0" text="Create Account" AnchorPane.leftAnchor="355.0" AnchorPane.rightAnchor="241.0" />
+      <Text fx:id="error" fill="RED" layoutX="274.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="150.13671875" />
+      <ToggleButton fx:id="ascii" layoutX="309.0" layoutY="570.0" mnemonicParsing="false" onAction="#ascii" text="ASCII MODE" />
+   </children>
+</AnchorPane>
